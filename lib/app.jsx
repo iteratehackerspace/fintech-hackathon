@@ -39,6 +39,7 @@ class App extends Component {
     };
     const ledgerStyle= {
       list_items:{
+
         listStyleType: 'none',
         fontFamily: 'sans-serif',
         fontSize: '18px',
@@ -50,11 +51,12 @@ class App extends Component {
         width: '20%',
       },
       container:{
+        opacity: '.8',
         minWidth:'40vw',
         fontSize: '20px',
         marginTop:'10vh',
         alignSelf: 'flex-start',
-        backgroundColor: 'red',
+        backgroundColor: 'white',
         height:'80vh',
         borderRadius: '10px',
         display: 'inline-block',
@@ -75,6 +77,7 @@ class App extends Component {
       },
     };
     const graphStyle = {
+      opacity: '.8',
       marginTop:'10vh',
       minWidth:'40vw',
       height:'80vh',
