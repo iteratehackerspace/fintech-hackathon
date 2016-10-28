@@ -48,6 +48,7 @@ class StatusBar extends Component {
       display: 'inline-block',
       heigth: '2%',
       width: 'calc(100%/3)',
+      cursor: 'pointer',
     };
     const activeStyles = {
       border: '1px solid red',
@@ -55,6 +56,7 @@ class StatusBar extends Component {
       heigth: '2%',
       width: 'calc(100%/3)',
       backgroundColor: 'blue',
+      cursor: 'pointer',
     };
     return (
       <div>
