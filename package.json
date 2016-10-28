@@ -1,6 +1,6 @@
 {
   "name": "fintech-hackathon",
-  "engines": { "node" : ">=6.7.0"},
+  "engines": { "node" : ">=6.6.0"},
   "version": "0.0.1",
   "description": "hackathon-app",
   "dependencies": {
