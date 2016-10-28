@@ -34,7 +34,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "scripts": {
-    "start": "npm run front-end && node server.js",
+    "start": "node server.js",
     "dev-server": "webpack-dev-server",
     "front-end": "webpack --progress --colors"
   },
