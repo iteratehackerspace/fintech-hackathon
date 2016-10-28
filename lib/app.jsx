@@ -72,7 +72,7 @@ class App extends Component {
         animationName: 'anim',
       },
       styleFirst: {
-        backgroundColor: '#2EB281',
+        backgroundColor: '#426871',
         display: 'flex',
         width: '40vw',
       },
@@ -83,7 +83,7 @@ class App extends Component {
       marginTop:'10vh',
       minWidth:'40vw',
       height:'80vh',
-      backgroundColor:'orange',
+      backgroundColor:'#d2b04c',
       borderRadius: '20px',
     };
 
