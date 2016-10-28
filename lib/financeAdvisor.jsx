@@ -5,61 +5,35 @@ const { Component } = React;
 export default
 class FinanceAdvisor extends Component {
 
-  // constructor() {
-  //   super();
-  //   this.state = { msgs: [], command:''};
-  //   this.conn = new WebSocket(webSocketAddr);
-  //   this.getCommand = this.getCommand.bind(this);
-  //   this.cleanCommand = this.cleanCommand.bind(this);
-  //   this.formChanged = this.formChanged.bind(this);
-  // }
-  // componentDidMount() {
-  //   this.conn.onmessage = (message) => {
-  //     const reply = JSON.parse(message.data);
-  //     switch (reply.message_type) {
-  //       case 'new_chat_message':
-  //       this.setState({ msgs: [...this.state.msgs] });
-  //       break;
-  //       default:
-  //       console.error('Oops, Cortana is confused');
-  //     }
-  //   };
-  //   const initialMessageSendTimer = setInterval(() =>{
-  //     if (this.conn.readyState === 1) {
-  //       this.conn.send(JSON.stringify({
-  //         cmd: 'connect',
-  //       }));
-  //       clearInterval(initialMessageSendTimer);
-  //     }
-  //   }, 500);
-  //   getCommand() {
-  //     this.setState({command:'Hi Cortana,'});
-  //   }
-  //   cleanCommand(){
-  //     this.setState({command:''});
-  //   }
-  // }
+
+
   render () {
     let mainContainer = {
       height: '40%',
       width: '20%',
-      backgroundColor: 'black',
+      backgroundColor: 'powderblue',
+      opacity: '.90',
       flexDirection: 'column',
       zIndex: '10000',
       bottom: '0',
-      left: '70%',
-      position: 'fixed'
+      left: '60%',
+      right: '10%',
+      position: 'fixed',
+      borderRadius: '5px'
     }
     let header = {
       display: 'flex',
       backgroundColor: 'grey',
       color: 'white',
-      fontWeight: 'bolder',
+      font: 'Sans-serif',
+      paddingTop: '.25em',
+      paddingBottom: '.25em',
       width: '100%',
-      height: '10%',
+      height: '12%',
       fontSize: '2em',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      borderRadius: '5px'
     }
     let inputDiv = {
       position: 'fixed',
@@ -70,34 +44,35 @@ class FinanceAdvisor extends Component {
 
     }
     let input = {
-
+      border: 'none',
       height: '2em',
-      width: '100%'
+      width: '100%',
+      paddingLeft: '.25em'
     }
     let sendMsg = {
       position: 'absolute',
       right: '0',
-      backgroundColor: 'purple',
+      backgroundColor: '#83D3C4',
+      border: 'none',
       height: '2em',
       width: '3.5em'
     }
     return (
-      <div style ={mainContainer}>
-        <div style = {header}>
-          Advisor Bot
-        </div>
+      <div style = {mainContainer}>
+      <div style = {header}>
+        Advisor Bot
+      </div>
         <div style = {inputDiv}>
+
           <button style={sendMsg}>
             Send
           </button>
-            <input
-              style = {input}
-              type={'text'}
-              placeholder={'How can I help?'}
-            />
-
+          <input
+            style = {input}
+            type={'text'}
+            placeholder={'How can I help?'}
+          />
         </div>
-
       </div>
     );
   }
