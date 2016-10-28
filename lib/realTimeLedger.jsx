@@ -14,6 +14,7 @@ class RealTimeLedger extends Component {
     const panel = this.refs.transaction_container;
     if (panel.lastChild) panel.lastChild.scrollIntoView();
   }
+
   render() {
     const TransactionFullList = this.props.transactions.map((tran, idx) => {
       return (

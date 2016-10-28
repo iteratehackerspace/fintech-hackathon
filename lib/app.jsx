@@ -11,18 +11,20 @@ class App extends Component {
     super();
     this.state = {trans: []}
   }
+
   componentDidMount(){
     setInterval(() => {
       const newTrans = {
         buyer: 'Somebody',
         seller: 'Somebody',
-        transID: '123104210',
+        transID: '10MM100',
         price: '10c',
         types: 'something'
       };
       this.setState({...this.state, trans:[...this.state.trans, newTrans]});
     }, 2 * 1000);
   }
+
   render () {
     const vidStyle = {
       position: 'fixed',
@@ -59,7 +61,7 @@ class App extends Component {
         alignSelf: 'flex-start',
         backgroundColor: 'white',
         height:'80vh',
-        borderRadius: '10px',
+        borderRadius: '20px',
         display: 'inline-block',
         overflowY: 'scroll',
         scrollSpeed: 'slow',
@@ -70,11 +72,13 @@ class App extends Component {
         scrollBehavior: 'smooth',
         transition: 'ease-in 2s',
         animationName: 'anim',
+        textAlign: 'center',
       },
       styleFirst: {
         backgroundColor: '#426871',
         display: 'flex',
         width: '40vw',
+        position: 'absolute',
       },
     };
     const graphStyle = {
@@ -104,11 +108,3 @@ class App extends Component {
 };
 
 render(<App/>, document.getElementById('container'));
-
-
-
-//implement this somehow
-//animation-duration: 1s,
-//animation-iteration-count: infinite //or 1
-//animation-timing-function: ease-in;
-//opacity: 0

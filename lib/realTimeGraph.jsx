@@ -59,7 +59,6 @@ class StatusBar extends Component {
       opacity: '.9',
       cursor: 'pointer',
       borderRadius: '20px',
-      textAlign: 'center',
     };
     return (
       <div>
