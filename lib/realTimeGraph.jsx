@@ -49,33 +49,39 @@ class StatusBar extends Component {
       width: 'calc(100%/3)',
       cursor: 'pointer',
       borderRadius: '20px',
-      textAlign: 'center',
+      paddingLeft: '50px',
+      paddingTop: '5px',
+      paddingBottom: '5px',
+      transition: 'all 1s',
     };
     const activeStyles = {
       display: 'inline-block',
+      paddingLeft: '20px',
       heigth: '2%',
       width: 'calc(100%/3)',
       backgroundColor: '#426871',
+      color: 'white',
       opacity: '.9',
       cursor: 'pointer',
       borderRadius: '20px',
+      transition: 'all 1s',
     };
     return (
       <div>
         <div
           onClick={this.clickEvent}
           style={this.state.active[0] ? activeStyles : styles}
-          id={1}>Graph1
+          id={1}>Graph 1
         </div>
         <div
           onClick={this.clickEvent}
           style={this.state.active[1] ? activeStyles : styles}
-          id={2}>Graph2
+          id={2}>Graph 2
         </div>
         <div
           onClick={this.clickEvent}
           style={this.state.active[2] ? activeStyles : styles}
-          id={3}>Graph3
+          id={3}>Graph 3
         </div>
       </div>
     );

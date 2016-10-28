@@ -79,6 +79,7 @@ class App extends Component {
         display: 'flex',
         width: '40vw',
         position: 'absolute',
+        borderRadius: '5px',
       },
     };
     const graphStyle = {
