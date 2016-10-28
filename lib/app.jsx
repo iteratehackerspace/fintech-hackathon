@@ -51,6 +51,7 @@ class App extends Component {
         width: '20%',
       },
       container:{
+        marginLeft: '5vw',
         opacity: '.8',
         minWidth:'40vw',
         fontSize: '20px',
@@ -77,6 +78,7 @@ class App extends Component {
       },
     };
     const graphStyle = {
+      marginRight: '5vw',
       opacity: '.8',
       marginTop:'10vh',
       minWidth:'40vw',
