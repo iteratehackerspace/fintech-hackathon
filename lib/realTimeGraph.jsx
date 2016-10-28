@@ -9,12 +9,12 @@ class RealTimeGraph extends Component {
 
   constructor() {
     super();
-    this.state = {currentID: '1'}
+    this.state = {currentID: 1}
   }
 
   render () {
     let lineData = [
-      {
+      [{
         name: "series1",
         values: [
           { x: 0, y: 20 },
@@ -27,8 +27,8 @@ class RealTimeGraph extends Component {
         ],
         strokeWidth: 3,
         strokeDashArray: "5,5",
-      },
-      {
+      }],
+      [{
         name: "series2",
         values: [
           { x: 0, y: 7.5 },
@@ -39,7 +39,19 @@ class RealTimeGraph extends Component {
           { x: 5, y: 6 },
           { x: 6, y: 2 },
         ]
-      }
+      }],
+      [{
+        name: "series3",
+        values: [
+          { x: 0, y: 7.5 },
+          { x: 1, y: 5 },
+          { x: 2, y: 20 },
+          { x: 3, y: 12 },
+          { x: 4, y: 4 },
+          { x: 5, y: 6 },
+          { x: 6, y: 2 },
+        ]
+      }]
     ];
     const styles = {
       height: '90%',
@@ -55,7 +67,7 @@ class RealTimeGraph extends Component {
         />
         <LineChart
           legend={true}
-          data={lineData}
+          data={lineData[this.state.currentID-1]}
           width='100%'
           height={400}
           viewBoxObject={{
