@@ -7,7 +7,8 @@
     "node_modules/react/dist/react.js",
     "node_modules/react-dom/dist/react-dom.js",
     "node_modules/react-dom/dist/react-dom-server.js",
-    "node_modules/express/lib/express.js"
+    "node_modules/express/lib/express.js",
+    "node_modules/botbuilder/lib/botbuilder.js"
   ],
   "plugins": {
     "node": { },
