@@ -95,7 +95,7 @@ class App extends Component {
     return (
       <div style={bodyStyle}>
         <video playsInline autoPlay muted loop style={vidStyle}>
-            <source src={'/Busy-City.webm'} type={'video/webm'}/>
+            <source src={'/New-York-Jam.webm'} type={'video/webm'}/>
           </video>
     	<RealTimeLedger transactions={this.state.trans}
                   myStyle={ledgerStyle}
