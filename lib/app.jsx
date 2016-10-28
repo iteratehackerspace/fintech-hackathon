@@ -41,6 +41,21 @@ class App extends Component {
       display: 'flex',
       flexWrap: 'wrap'
     };
+    const hello  = {
+      width: '100%',
+      height: '9rem',
+      backgroundColor: 'white',
+      opacity: '.8',
+      font: 'Helvetica',
+      fontSize: '8rem',
+      textAlign: 'center',
+      paddingTop: '3rem',
+      marginBottom: '1rem',
+      color: 'grey',
+
+
+
+    };
     const ledgerStyle= {
       list_items:{
 
@@ -101,6 +116,9 @@ class App extends Component {
 
     return (
       <div style={bodyStyle}>
+        <header style={hello}>
+          HAYABOT
+        </header>
         <video playsInline autoPlay muted loop style={vidStyle}>
             <source src={'/New-York-Jam.webm'} type={'video/webm'}/>
           </video>
