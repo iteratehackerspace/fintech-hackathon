@@ -29,32 +29,13 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.16.0",
     "babel-preset-stage-3": "^6.11.0",
-    "eslint": "^3.8.0",
-    "eslint-config-airbnb": "^12.0.0",
-    "eslint-plugin-import": "^2.0.1",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.4.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "extends": "airbnb",
-    "installedESLint": true,
-    "plugins": [
-      "react",
-      "jsx-a11y",
-      "import"
-    ]
   },
   "scripts": {
     "start": "npm run front-end && node server.js",
     "dev-server": "webpack-dev-server",
-    "front-end": "webpack --progress --colors",
-    "lint": "eslint server.js lib/**"
+    "front-end": "webpack --progress --colors"
   },
   "author": "iteratehackerspace <iteratehackerspace@gmail.com>",
   "license": "MIT"
