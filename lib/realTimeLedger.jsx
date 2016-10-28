@@ -4,10 +4,9 @@ const { Component } = React;
 
 export default
 class RealTimeLedger extends Component {
-
   shouldComponentUpdate(nextProps) {
-    const next = nextProps.messages;
-    const current = this.props.messages;
+    const next = nextProps.transactions;
+    const current = this.props.transactions;
     return next[next.length - 1] !== current[current.length - 1];
   }
 
@@ -15,19 +14,49 @@ class RealTimeLedger extends Component {
     const panel = this.refs.transaction_container;
     if (panel.lastChild) panel.lastChild.scrollIntoView();
   }
-
   render() {
-    
-    const TransactionList = this.props.transactions.map((transaction, idx) => {
+    const TransactionFullList = this.props.transactions.map((tran, idx) => {
       return (
-        <li key={idx} style={this.props.myStyle.list_items}>
-          {transaction}
-        </li>
+        <div key={idx} style={this.props.myStyle.stylee}>
+          <li style={this.props.myStyle.list_items}>
+            {tran.buyer}
+          </li>
+          <li style={this.props.myStyle.list_items}>
+            {tran.seller}
+          </li>
+          <li style={this.props.myStyle.list_items}>
+            {tran.transID}
+          </li>
+          <li style={this.props.myStyle.list_items}>
+            {tran.price}
+          </li>
+          <li style={this.props.myStyle.list_items}>
+            {tran.types}
+          </li>
+        </div>
       );
     });
+
     return (
       <div ref={'transaction_container'} style={this.props.myStyle.container}>
-	       {TransactionList}
+        <div style={this.props.myStyle.styleFirst}>
+          <li style={this.props.myStyle.list_items}>
+            Buyer
+          </li>
+          <li style={this.props.myStyle.list_items}>
+            Seller
+          </li>
+          <li style={this.props.myStyle.list_items}>
+            Seller
+          </li>
+          <li style={this.props.myStyle.list_items}>
+            Price
+          </li>
+          <li style={this.props.myStyle.list_items}>
+            Type
+          </li>
+        </div>
+        {TransactionFullList}
       </div>
     );
   }
