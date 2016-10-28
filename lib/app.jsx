@@ -24,8 +24,14 @@ class App extends Component {
     }, 2 * 1000);
   }
   render () {
+    const vidStyle = {
+      position: 'fixed',
+      minWidth: '100%',
+      minHeight: '100%',
+      zIndex: '-100',
+      backgroundSize: 'cover'
+    };
     const bodyStyle = {
-      marginLeft:'5vw',
       height:'100vh',
       width:'100vw',
       display:'flex',
@@ -78,6 +84,9 @@ class App extends Component {
 
     return (
       <div style={bodyStyle}>
+        <video playsInline autoPlay muted loop style={vidStyle}>
+            <source src={'/Busy-City.webm'} type={'video/webm'}/>
+          </video>
     	<RealTimeLedger transactions={this.state.trans}
                   myStyle={ledgerStyle}
   />
