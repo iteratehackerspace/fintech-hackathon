@@ -1,4 +1,6 @@
 import React from 'react';
+//import d3 from 'd3';
+import * as rd3 from 'react-d3';
 
 const { Component } = React;
 
@@ -11,18 +13,62 @@ class RealTimeGraph extends Component {
   }
 
   render () {
+    let lineData = [
+      {
+        name: "series1",
+        values: [
+          { x: 0, y: 20 },
+          { x: 1, y: 30 },
+          { x: 2, y: 10 },
+          { x: 3, y: 5 },
+          { x: 4, y: 7.5 },
+          { x: 5, y: 15 },
+          { x: 6, y: 10 },
+        ],
+        strokeWidth: 3,
+        strokeDashArray: "5,5",
+      },
+      {
+        name: "series2",
+        values: [
+          { x: 0, y: 7.5 },
+          { x: 1, y: 5 },
+          { x: 2, y: 20 },
+          { x: 3, y: 12 },
+          { x: 4, y: 4 },
+          { x: 5, y: 6 },
+          { x: 6, y: 2 },
+        ]
+      }
+    ];
     const styles = {
       height: '90%',
       width: '100%',
       maxWidth: '500px',
     };
+    const LineChart = rd3.LineChart;
     return (
       <div style={this.props.myStyle}>
         <StatusBar changeImage={(number) => {
             this.setState({ ...this.state, currentID: `${number}` });
           }}
         />
-        <img src={`${this.state.currentID}.jpg`} style={styles} alt={`${this.state.currentID}`} />
+        <LineChart
+          legend={true}
+          data={lineData}
+          width='100%'
+          height={400}
+          viewBoxObject={{
+            x: 0,
+            y: 0,
+            width: 500,
+            height: 400,}
+          }
+          title="Line Chart"
+          yAxisLabel="Altitude"
+          xAxisLabel="Elapsed Time (sec)"
+          gridHorizontal={true}
+        />
       </div>
     );
   }
