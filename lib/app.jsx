@@ -7,23 +7,39 @@ import FinanceAdvisor from './financeAdvisor';
 const { Component } = React;
 
 class App extends Component {
+
   render () {
-    const style= {
+    const bodyStyle = {
+      marginLeft:'5vw',
+      height:'100vh',
+      width:'100vw',
+      display:'flex',
+      justifyContent:'space-between'
+    };
+    const ledgerStyle= {
       list_items:{
         fontSize: '20px',
       },
       container:{
+	minWidth:'40vw',
         fontSize: '20px',
+	marginTop:'10vh',
+	alignSelf: 'flex-start',
+	backgroundColor: 'red',
+	height:'80vh'
       },
     };
+    const graphStyle = {
+      marginTop:'10vh',
+      minWidth:'40vw',
+      height:'80vh',
+      backgroundColor:'orange'
+    };
+
     return (
-      <div>
-	Happy hacking
-	<RealTimeLedger
-    transactions={[]}
-    myStyle={style}
-  />
-	<RealTimeGraph/>
+      <div style={bodyStyle}>
+	<RealTimeLedger transactions={['a', 'b']} myStyle={ledgerStyle} />
+	<RealTimeGraph myStyle={graphStyle}/>
 	<FinanceAdvisor/>
       </div>
     );

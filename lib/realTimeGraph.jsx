@@ -6,7 +6,7 @@ export default
 class RealTimeGraph extends Component {
   render () {
     return (
-      <div>
+      <div style={this.props.myStyle}>
 	RealTime Graph
       </div>
     );
