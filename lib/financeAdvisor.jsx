@@ -4,13 +4,14 @@ const { Component } = React;
 
 export default
 class FinanceAdvisor extends Component {
-  //
+
   // constructor() {
   //   super();
   //   this.state = { msgs: [], command:''};
   //   this.conn = new WebSocket(webSocketAddr);
   //   this.getCommand = this.getCommand.bind(this);
   //   this.cleanCommand = this.cleanCommand.bind(this);
+  //   this.formChanged = this.formChanged.bind(this);
   // }
   // componentDidMount() {
   //   this.conn.onmessage = (message) => {
@@ -40,19 +41,63 @@ class FinanceAdvisor extends Component {
   // }
   render () {
     let mainContainer = {
-      height: '30em',
-      width: '20em',
+      height: '40%',
+      width: '20%',
       backgroundColor: 'black',
+      flexDirection: 'column',
+      zIndex: '10000',
+      bottom: '0',
+      left: '70%',
+      position: 'fixed'
     }
     let header = {
+      display: 'flex',
       backgroundColor: 'grey',
+      color: 'white',
+      fontWeight: 'bolder',
       width: '100%',
-      height: '3em'
+      height: '10%',
+      fontSize: '2em',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }
+    let inputDiv = {
+      position: 'fixed',
+      bottom: '0',
+      height: '2em',
+      width: '20%',
+      display: 'flex'
+
+    }
+    let input = {
+
+      height: '2em',
+      width: '100%'
+    }
+    let sendMsg = {
+      position: 'absolute',
+      right: '0',
+      backgroundColor: 'purple',
+      height: '2em',
+      width: '3.5em'
     }
     return (
       <div style ={mainContainer}>
-        <div style = {header}></div>
-Advisor Bot
+        <div style = {header}>
+          Advisor Bot
+        </div>
+        <div style = {inputDiv}>
+          <button style={sendMsg}>
+            Send
+          </button>
+            <input
+              style = {input}
+              type={'text'}
+              placeholder={'How can I help?'}
+            />
+
+        </div>
+
       </div>
     );
   }
