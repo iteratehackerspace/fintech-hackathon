@@ -44,19 +44,21 @@ class StatusBar extends Component {
 
   render() {
     const styles = {
-      border: '1px solid red',
       display: 'inline-block',
       heigth: '2%',
       width: 'calc(100%/3)',
       cursor: 'pointer',
+      borderRadius: '20px',
+      textAlign: 'center',
     };
     const activeStyles = {
-      border: '1px solid red',
       display: 'inline-block',
       heigth: '2%',
       width: 'calc(100%/3)',
       backgroundColor: 'blue',
       cursor: 'pointer',
+      borderRadius: '20px',
+      textAlign: 'center',
     };
     return (
       <div>

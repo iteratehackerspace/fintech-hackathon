@@ -72,7 +72,8 @@ class App extends Component {
       marginTop:'10vh',
       minWidth:'40vw',
       height:'80vh',
-      backgroundColor:'orange'
+      backgroundColor:'orange',
+      borderRadius: '20px',
     };
 
     return (
