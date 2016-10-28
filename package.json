@@ -51,7 +51,7 @@
     ]
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "npm run front-end && node server.js",
     "dev-server": "webpack-dev-server",
     "front-end": "webpack --progress --colors",
     "lint": "eslint server.js lib/**"
