@@ -48,7 +48,7 @@ class RealTimeLedger extends Component {
             Seller
           </li>
           <li style={this.props.myStyle.list_items}>
-            Seller
+            TransID
           </li>
           <li style={this.props.myStyle.list_items}>
             Price

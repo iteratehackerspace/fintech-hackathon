@@ -37,7 +37,9 @@ class App extends Component {
       height:'100vh',
       width:'100vw',
       display:'flex',
-      justifyContent:'space-between'
+      justifyContent:'space-between',
+      display: 'flex',
+      flexWrap: 'wrap'
     };
     const ledgerStyle= {
       list_items:{
@@ -51,11 +53,12 @@ class App extends Component {
         wordWrap: 'break-word',
         transition: 'top 1s',
         width: '20%',
+        textAlign: 'center',
       },
       container:{
         marginLeft: '5vw',
         opacity: '.8',
-        minWidth:'40vw',
+        width:'40%',
         fontSize: '20px',
         marginTop:'10vh',
         alignSelf: 'flex-start',
@@ -73,13 +76,16 @@ class App extends Component {
         transition: 'ease-in 2s',
         animationName: 'anim',
         textAlign: 'center',
+        height: '3rem',
+        width: '100%',
       },
       styleFirst: {
         backgroundColor: '#426871',
         display: 'flex',
-        width: '40vw',
+        width: '40%',
         position: 'absolute',
         borderRadius: '5px',
+        height: '3rem',
       },
     };
     const graphStyle = {
@@ -90,6 +96,7 @@ class App extends Component {
       height:'80vh',
       backgroundColor:'#d2b04c',
       borderRadius: '20px',
+      paddingLeft: '1vw'
     };
 
     return (
