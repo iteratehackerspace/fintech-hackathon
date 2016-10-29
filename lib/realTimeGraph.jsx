@@ -58,7 +58,8 @@ class RealTimeGraph extends Component {
         <LineChart
           legend={false}
           data={lineData[this.state.currentID-1]}
-          height={400}
+          height={'100%'}
+          width={'100%'}
           viewBoxObject={{
             x: -5,
             y: 0,
