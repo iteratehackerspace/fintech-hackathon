@@ -40,15 +40,15 @@ class App extends Component {
       });
       const newElm1 = {
         x: this.state.count,
-        y: Math.floor(Math.random()*15),
+        y: Math.floor(Math.random()*5 + 12),
       };
       const newElm2 = {
         x: this.state.count,
-        y: Math.floor(Math.random()*15),
+        y: Math.floor(Math.random()*10 + 14),
       };
       const newElm3 = {
         x: this.state.count,
-        y: Math.floor(Math.random()*15),
+        y: Math.floor(Math.random()*2 + 11),
       };
       this.setState({...this.state,
         graph1:[...this.state.graph1, newElm1],
@@ -146,6 +146,7 @@ class App extends Component {
       graph2={this.state.graph2}
       graph3={this.state.graph3}
     />
+  <div> <a href = "https://iteratehackerspace.github.io/" target="_blank"> More about us </a> </div>
 	<FinanceAdvisor/>
       </div>
     );

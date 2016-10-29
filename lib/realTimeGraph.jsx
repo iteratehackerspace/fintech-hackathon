@@ -12,9 +12,9 @@ class RealTimeGraph extends Component {
   }
 
   render () {
-    let graph1 = [{x:0, y:0}];
-    let graph2 = [{x:0, y:0}];
-    let graph3 = [{x:0, y:0}];
+    let graph1 = [{x:0, y:9 }];
+    let graph2 = [{x:0, y:11 }];
+    let graph3 = [{x:0, y:8 }];
     this.props.graph1.forEach((value, idx) => {
       graph1[idx+1] = value;
     });
@@ -118,17 +118,17 @@ class StatusBar extends Component {
         <div
           onClick={this.clickEvent}
           style={this.state.active[0] ? activeStyles : styles}
-          id={1}>Graph 1
+          id={1}>Banking
         </div>
         <div
           onClick={this.clickEvent}
           style={this.state.active[1] ? activeStyles : styles}
-          id={2}>Graph 2
+          id={2}>Real Estate
         </div>
         <div
           onClick={this.clickEvent}
           style={this.state.active[2] ? activeStyles : styles}
-          id={3}>Graph 3
+          id={3}>Medical
         </div>
       </div>
     );

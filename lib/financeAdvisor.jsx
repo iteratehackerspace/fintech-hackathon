@@ -28,7 +28,7 @@ class FinanceAdvisor extends Component {
       textAlign:'center',
       minHeight:'20px'
     };
-    
+
     const chat = (show => {
       const bar = <div style={smallerStyle} onClick={e => {
 	this.setState({shouldShow: !this.state.shouldShow});
