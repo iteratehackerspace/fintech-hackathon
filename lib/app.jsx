@@ -10,7 +10,7 @@ class App extends Component {
 
   constructor(){
     super();
-    this.state = {trans: [], graph1: [], graph2: [], graph3: [], count:0};
+    this.state = {trans: [], graph1: [{x:0, y:9 }], graph2: [{x:0, y:9 }], graph3: [{x:0, y:9 }], count:0};
   }
 
   componentDidMount(){
@@ -38,6 +38,9 @@ class App extends Component {
         trans:[...this.state.trans, newTrans],
         count:this.state.count+1,
       });
+      let arr1 = this.state.graph1;
+      let arr2 = this.state.graph2;
+      let arr3 = this.state.graph3;
       const newElm1 = {
         x: this.state.count,
         y: Math.floor(Math.random()*5 + 12),
@@ -50,10 +53,22 @@ class App extends Component {
         x: this.state.count,
         y: Math.floor(Math.random()*2 + 11),
       };
+      if(this.state.count > 10) {
+        arr1.shift();
+        arr2.shift();
+        arr3.shift();
+        arr1.push(newElm1);
+        arr2.push(newElm2);
+        arr3.push(newElm3);
+      } else {
+        arr1.push(newElm1);
+        arr2.push(newElm2);
+        arr3.push(newElm3);
+      }
       this.setState({...this.state,
-        graph1:[...this.state.graph1, newElm1],
-        graph2:[...this.state.graph1, newElm2],
-        graph3:[...this.state.graph1, newElm3],
+        graph1: arr1,
+        graph2: arr2,
+        graph3: arr3,
       });
     }, 2 * 1000);
   }

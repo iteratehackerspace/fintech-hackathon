@@ -12,9 +12,9 @@ class RealTimeGraph extends Component {
   }
 
   render () {
-    let graph1 = [{x:0, y:9 }];
-    let graph2 = [{x:0, y:11 }];
-    let graph3 = [{x:0, y:8 }];
+    let graph1 = [this.props.graph1[0]];
+    let graph2 = [this.props.graph2[0]];
+    let graph3 = [this.props.graph3[0]];
     this.props.graph1.forEach((value, idx) => {
       graph1[idx+1] = value;
     });
