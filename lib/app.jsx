@@ -95,7 +95,7 @@ class App extends Component {
         opacity: '.8',
         width:'47%',
         fontSize: '20px',
-        marginTop:'10vh',
+        marginTop:'15vh',
         alignSelf: 'flex-start',
         backgroundColor: 'white',
         height:'80vh',
@@ -125,9 +125,9 @@ class App extends Component {
       },
     };
     const graphStyle = {
-      marginRight: '5vw',
+      marginRight: '2vw',
       opacity: '.8',
-      marginTop:'10vh',
+      marginTop:'15vh',
       minWidth:'40vw',
       height:'80vh',
       backgroundColor:'#d2b04c',
