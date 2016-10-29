@@ -4,6 +4,7 @@ const { Component } = React;
 
 export default
 class RealTimeLedger extends Component {
+
   shouldComponentUpdate(nextProps) {
     const next = nextProps.transactions;
     const current = this.props.transactions;

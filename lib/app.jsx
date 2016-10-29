@@ -25,17 +25,13 @@ class App extends Component {
     const sectors =
 	  ['Real estate', 'Services', 'Medical',
 	   'Education', 'Transport', 'Banking'];
-    const spot = max => {
-      return Math.floor(Math.random() * max);
-    };
-
+    const spot = max => Math.floor(Math.random() * max);
     setInterval(() => {
-
       const newTrans = {
         buyer: names[spot(names.length)],
         seller: names[spot(names.length)],
         transID: `0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
-        price: `${spot(1000000)} AMD`,
+        price: `${spot(3000000)} AMD`,
         sector: sectors[spot(sectors.length)]
       };
       this.setState({...this.state,
