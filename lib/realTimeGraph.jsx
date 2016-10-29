@@ -58,7 +58,6 @@ class RealTimeGraph extends Component {
         <LineChart
           legend={false}
           data={lineData[this.state.currentID-1]}
-          width='100%'
           height={400}
           viewBoxObject={{
             x: -5,
@@ -66,7 +65,6 @@ class RealTimeGraph extends Component {
             width: 500,
             height: 400,}
           }
-          title="Line Chart"
           yAxisLabel={axisNames[this.state.currentID-1]}
           xAxisLabel="Elapsed Time (sec)"
           gridHorizontal={true}
@@ -101,6 +99,7 @@ class StatusBar extends Component {
       paddingTop: '5px',
       paddingBottom: '5px',
       transition: 'all 1s',
+      fontSize: '30px',
     };
     const activeStyles = {
       display: 'inline-block',
@@ -113,6 +112,7 @@ class StatusBar extends Component {
       cursor: 'pointer',
       borderRadius: '20px',
       transition: 'all 1s',
+      fontSize: '30px',
     };
     return (
       <div>
@@ -129,7 +129,7 @@ class StatusBar extends Component {
         <div
           onClick={this.clickEvent}
           style={this.state.active[2] ? activeStyles : styles}
-          id={3}>M1
+          id={3}>M1/M2
         </div>
       </div>
     );
