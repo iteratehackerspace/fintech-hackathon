@@ -93,7 +93,7 @@ class App extends Component {
       container:{
         marginLeft: '2vw',
         opacity: '.8',
-        width:'47%',
+        width:'50%',
         fontSize: '20px',
         marginTop:'15vh',
         alignSelf: 'flex-start',
@@ -118,7 +118,7 @@ class App extends Component {
       styleFirst: {
         backgroundColor: '#426871',
         display: 'flex',
-        width: '47%',
+        width: '50%',
         position: 'absolute',
         borderRadius: '5px',
         height: '3rem',
