@@ -7,19 +7,32 @@ import FinanceAdvisor from './financeAdvisor';
 const { Component } = React;
 
 class App extends Component {
+
   constructor(){
     super();
-    this.state = {trans: []}
+    this.state = {trans: []};
   }
 
   componentDidMount(){
+    const names =
+	  ['Armen', 'Rouben', 'Edgar',
+	   'Hasmik', 'Karen', 'Suren',
+	   'Vianka', 'Ani', 'Viy'];
+    const sectors =
+	  ['real estate', 'services', 'medical',
+	   'education'];
+    const spot = max => {
+      return Math.floor(Math.random() * max);
+    };
+    
     setInterval(() => {
+      
       const newTrans = {
-        buyer: 'Somebody',
-        seller: 'Somebody',
-        transID: '10MM100',
-        price: '10c',
-        types: 'something'
+        buyer: names[spot(names.length)],
+        seller: names[spot(names.length)],
+        transID: `0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+        price: `${spot(10000)}AMD`,
+        sector: sectors[spot(sectors.length)]
       };
       this.setState({...this.state, trans:[...this.state.trans, newTrans]});
     }, 2 * 1000);
@@ -43,7 +56,6 @@ class App extends Component {
     };
     const ledgerStyle= {
       list_items:{
-
         listStyleType: 'none',
         fontFamily: 'sans-serif',
         fontSize: '18px',
@@ -56,9 +68,9 @@ class App extends Component {
         textAlign: 'center',
       },
       container:{
-        marginLeft: '5vw',
+        marginLeft: '2vw',
         opacity: '.8',
-        width:'40%',
+        width:'47%',
         fontSize: '20px',
         marginTop:'10vh',
         alignSelf: 'flex-start',
@@ -82,7 +94,7 @@ class App extends Component {
       styleFirst: {
         backgroundColor: '#426871',
         display: 'flex',
-        width: '40%',
+        width: '47%',
         position: 'absolute',
         borderRadius: '5px',
         height: '3rem',
@@ -102,11 +114,10 @@ class App extends Component {
     return (
       <div style={bodyStyle}>
         <video playsInline autoPlay muted loop style={vidStyle}>
-            <source src={'/New-York-Jam.webm'} type={'video/webm'}/>
-          </video>
+          <source src={'/New-York-Jam.webm'} type={'video/webm'}/>
+        </video>
     	<RealTimeLedger transactions={this.state.trans}
-                  myStyle={ledgerStyle}
-  />
+			myStyle={ledgerStyle}/>
 	<RealTimeGraph myStyle={graphStyle}/>
 	<FinanceAdvisor/>
       </div>

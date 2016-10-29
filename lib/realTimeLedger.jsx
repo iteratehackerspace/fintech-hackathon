@@ -32,7 +32,7 @@ class RealTimeLedger extends Component {
             {tran.price}
           </li>
           <li style={this.props.myStyle.list_items}>
-            {tran.types}
+            {tran.sector}
           </li>
         </div>
       );
@@ -48,13 +48,13 @@ class RealTimeLedger extends Component {
             Seller
           </li>
           <li style={this.props.myStyle.list_items}>
-            TransID
+	    Blockchain ID
           </li>
           <li style={this.props.myStyle.list_items}>
             Price
           </li>
           <li style={this.props.myStyle.list_items}>
-            Type
+	    Sector
           </li>
         </div>
         {TransactionFullList}
