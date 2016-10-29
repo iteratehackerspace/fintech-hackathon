@@ -20,10 +20,11 @@ class App extends Component {
 	   'Eduard', 'Erik', 'Diana',
 	   'Svetlana', 'Arman', 'Armine',
 	   'Emma', 'Hagop',
-	   'Vianka', 'Ani', 'Viy'];
+	   'Vianka', 'Ani', 'Viy', 'Mark',
+     'Kalipso', 'Robert', 'Lilith', 'Martin', 'Davit', 'Areg'];
     const sectors =
 	  ['Real estate', 'Services', 'Medical',
-	   'Education', 'Transport'];
+	   'Education', 'Transport', 'Banking'];
     const spot = max => {
       return Math.floor(Math.random() * max);
     };
