@@ -10,7 +10,7 @@ class App extends Component {
 
   constructor(){
     super();
-    this.state = {trans: []};
+    this.state = {trans: [], graph1: [], graph2: [], graph3: [], count:0};
   }
 
   componentDidMount(){
@@ -37,7 +37,27 @@ class App extends Component {
         price: `${spot(1000000)} AMD`,
         sector: sectors[spot(sectors.length)]
       };
-      this.setState({...this.state, trans:[...this.state.trans, newTrans]});
+      this.setState({...this.state,
+        trans:[...this.state.trans, newTrans],
+        count:this.state.count+1,
+      });
+      const newElm1 = {
+        x: this.state.count,
+        y: Math.floor(Math.random()*15),
+      };
+      const newElm2 = {
+        x: this.state.count,
+        y: Math.floor(Math.random()*15),
+      };
+      const newElm3 = {
+        x: this.state.count,
+        y: Math.floor(Math.random()*15),
+      };
+      this.setState({...this.state,
+        graph1:[...this.state.graph1, newElm1],
+        graph2:[...this.state.graph1, newElm2],
+        graph3:[...this.state.graph1, newElm3],
+      });
     }, 2 * 1000);
   }
 
@@ -123,7 +143,12 @@ class App extends Component {
         </video>
     	<RealTimeLedger transactions={this.state.trans}
 			myStyle={ledgerStyle}/>
-	<RealTimeGraph myStyle={graphStyle}/>
+    <RealTimeGraph
+      myStyle={graphStyle}
+      graph1={this.state.graph1}
+      graph2={this.state.graph2}
+      graph3={this.state.graph3}
+    />
 	<FinanceAdvisor/>
       </div>
     );

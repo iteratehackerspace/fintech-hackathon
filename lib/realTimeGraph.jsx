@@ -12,44 +12,34 @@ class RealTimeGraph extends Component {
   }
 
   render () {
+    let graph1 = [{x:0, y:0}];
+    let graph2 = [{x:0, y:0}];
+    let graph3 = [{x:0, y:0}];
+    this.props.graph1.forEach((value, idx) => {
+      graph1[idx+1] = value;
+    });
+    this.props.graph2.forEach((value, idx) => {
+      graph2[idx+1] = value;
+    });
+    this.props.graph3.forEach((value, idx) => {
+      graph3[idx+1] = value;
+    });
     let lineData = [
       [{
         name: "series1",
-        values: [
-          { x: 0, y: 20 },
-          { x: 1, y: 30 },
-          { x: 2, y: 10 },
-          { x: 3, y: 5 },
-          { x: 4, y: 7.5 },
-          { x: 5, y: 15 },
-          { x: 6, y: 10 },
-        ],
+        values: graph1,
         strokeWidth: 3,
         strokeDashArray: "5,5",
       }],
       [{
         name: "series2",
-        values: [
-          { x: 0, y: 7.5 },
-          { x: 1, y: 5 },
-          { x: 2, y: 20 },
-          { x: 3, y: 12 },
-          { x: 4, y: 4 },
-          { x: 5, y: 6 },
-          { x: 6, y: 2 },
-        ]
+        values: graph2,
       }],
       [{
         name: "series3",
-        values: [
-          { x: 0, y: 7.5 },
-          { x: 1, y: 5 },
-          { x: 2, y: 20 },
-          { x: 3, y: 12 },
-          { x: 4, y: 4 },
-          { x: 5, y: 6 },
-          { x: 6, y: 2 },
-        ]
+        values: graph3,
+        strokeWidth: 3,
+        strokeDashArray: "3,5",
       }]
     ];
     const styles = {
