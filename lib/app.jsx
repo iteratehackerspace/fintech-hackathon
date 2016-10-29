@@ -133,8 +133,9 @@ class App extends Component {
       background: 'linear-gradient(to right, #c7bfec, #73baaf)',
     };
     const infoStyle = {
-      paddingLeft: '600px',
-      color: 'black',
+      paddingLeft: '100px',
+      color: 'white',
+      display: 'inline-block',
     }
 
     return (
@@ -150,7 +151,7 @@ class App extends Component {
       graph2={this.state.graph2}
       graph3={this.state.graph3}
     />
-  <div> <a style = {infoStyle} href = "https://iteratehackerspace.github.io/" target="_blank"> More about us </a> </div>
+  <div> <div style = {infoStyle}>iteratehackerspace </div><a style = {infoStyle} href = "https://iteratehackerspace.github.io/" target="_blank"> More about us </a> </div>
 	<FinanceAdvisor/>
       </div>
     );
