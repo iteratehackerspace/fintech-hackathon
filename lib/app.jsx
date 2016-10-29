@@ -27,9 +27,9 @@ class App extends Component {
     const spot = max => {
       return Math.floor(Math.random() * max);
     };
-    
+
     setInterval(() => {
-      
+
       const newTrans = {
         buyer: names[spot(names.length)],
         seller: names[spot(names.length)],
@@ -83,10 +83,11 @@ class App extends Component {
         display: 'inline-block',
         overflowY: 'scroll',
         scrollSpeed: 'slow',
+        background: 'linear-gradient(to right, #c7bfec, #73baaf)',
       },
       stylee: {
         display: 'flex',
-        backgroundColor: 'black',
+        background: 'linear-gradient(to right, #000000, #28287A)',
         scrollBehavior: 'smooth',
         transition: 'ease-in 2s',
         animationName: 'anim',
@@ -111,7 +112,8 @@ class App extends Component {
       height:'80vh',
       backgroundColor:'#d2b04c',
       borderRadius: '20px',
-      paddingLeft: '1vw'
+      paddingLeft: '1vw',
+      background: 'linear-gradient(to right, #c7bfec, #73baaf)',
     };
 
     return (
