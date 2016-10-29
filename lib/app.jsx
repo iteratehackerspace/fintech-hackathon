@@ -90,7 +90,7 @@ class App extends Component {
       container:{
         marginLeft: '2vw',
         opacity: '.8',
-        width:'50%',
+        width:'54%',
         fontSize: '20px',
         marginTop:'15vh',
         alignSelf: 'flex-start',
@@ -115,7 +115,7 @@ class App extends Component {
       styleFirst: {
         backgroundColor: '#426871',
         display: 'flex',
-        width: '50%',
+        width: '54%',
         position: 'absolute',
         borderRadius: '5px',
         height: '3rem',
@@ -132,6 +132,10 @@ class App extends Component {
       paddingLeft: '1vw',
       background: 'linear-gradient(to right, #c7bfec, #73baaf)',
     };
+    const infoStyle = {
+      paddingLeft: '600px',
+      color: 'black',
+    }
 
     return (
       <div style={bodyStyle}>
@@ -146,7 +150,7 @@ class App extends Component {
       graph2={this.state.graph2}
       graph3={this.state.graph3}
     />
-  <div> <a href = "https://iteratehackerspace.github.io/" target="_blank"> More about us </a> </div>
+  <div> <a style = {infoStyle} href = "https://iteratehackerspace.github.io/" target="_blank"> More about us </a> </div>
 	<FinanceAdvisor/>
       </div>
     );
