@@ -66,7 +66,7 @@ class RealTimeGraph extends Component {
             height: 400,}
           }
           title="Line Chart"
-          yAxisLabel="Altitude"
+          yAxisLabel="Percentage"
           xAxisLabel="Elapsed Time (sec)"
           gridHorizontal={true}
         />
@@ -118,17 +118,17 @@ class StatusBar extends Component {
         <div
           onClick={this.clickEvent}
           style={this.state.active[0] ? activeStyles : styles}
-          id={1}>Banking
+          id={1}>Inflation
         </div>
         <div
           onClick={this.clickEvent}
           style={this.state.active[1] ? activeStyles : styles}
-          id={2}>Real Estate
+          id={2}>Volume
         </div>
         <div
           onClick={this.clickEvent}
           style={this.state.active[2] ? activeStyles : styles}
-          id={3}>Medical
+          id={3}>M1
         </div>
       </div>
     );
