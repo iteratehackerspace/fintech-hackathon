@@ -10,7 +10,8 @@ class FinanceAdvisor extends Component {
   }
 
   render () {
-    const botSecret = 'j8wZqP9tO4k.cwA.mxE.Zl9qLEbnDTwPHK-nqHpUU-avrdNq-x2Gr-sOXZkVL9g';
+    const botSecret =
+          'NL5gd68BbBY.cwA.vis.VcGzw76t32DY0Vdc5_4sWb-3CpGMV0gA8MHrmPpBjnY';
     const link =
 	  `https://webchat.botframework.com/embed/finance-advisor?s=${botSecret}`;
     const botStyle = {
