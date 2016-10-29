@@ -129,7 +129,7 @@ class App extends Component {
       height:'80vh',
       backgroundColor:'#d2b04c',
       borderRadius: '20px',
-      paddingLeft: '1vw',
+      paddingLeft: '2vw',
       background: 'linear-gradient(to right, #c7bfec, #73baaf)',
     };
     const infoStyle = {

@@ -42,6 +42,7 @@ class RealTimeGraph extends Component {
         strokeDashArray: "3,5",
       }]
     ];
+    let axisNames = ['Percentage', 'Millon AMD', 'x10 million AMD'];
     const styles = {
       height: '90%',
       width: '100%',
@@ -51,22 +52,22 @@ class RealTimeGraph extends Component {
     return (
       <div style={this.props.myStyle}>
         <StatusBar changeImage={(number) => {
-            this.setState({ ...this.state, currentID: `${number}` });
+            this.setState({ ...this.state, currentID: number });
           }}
         />
         <LineChart
-          legend={true}
+          legend={false}
           data={lineData[this.state.currentID-1]}
           width='100%'
           height={400}
           viewBoxObject={{
-            x: 0,
+            x: -5,
             y: 0,
             width: 500,
             height: 400,}
           }
           title="Line Chart"
-          yAxisLabel="Percentage"
+          yAxisLabel={axisNames[this.state.currentID-1]}
           xAxisLabel="Elapsed Time (sec)"
           gridHorizontal={true}
         />
