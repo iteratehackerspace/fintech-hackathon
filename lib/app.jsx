@@ -17,10 +17,13 @@ class App extends Component {
     const names =
 	  ['Armen', 'Rouben', 'Edgar',
 	   'Hasmik', 'Karen', 'Suren',
+	   'Eduard', 'Erik', 'Diana',
+	   'Svetlana', 'Arman', 'Armine',
+	   'Emma', 'Hagop',
 	   'Vianka', 'Ani', 'Viy'];
     const sectors =
-	  ['real estate', 'services', 'medical',
-	   'education'];
+	  ['Real estate', 'Services', 'Medical',
+	   'Education', 'Transport'];
     const spot = max => {
       return Math.floor(Math.random() * max);
     };
@@ -31,7 +34,7 @@ class App extends Component {
         buyer: names[spot(names.length)],
         seller: names[spot(names.length)],
         transID: `0x${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
-        price: `${spot(10000)}AMD`,
+        price: `${spot(1000000)} AMD`,
         sector: sectors[spot(sectors.length)]
       };
       this.setState({...this.state, trans:[...this.state.trans, newTrans]});
