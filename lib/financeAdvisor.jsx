@@ -6,7 +6,7 @@ export default
 class FinanceAdvisor extends Component {
   constructor () {
     super();
-    this.state = { shouldShow : true };
+    this.state = { shouldShow : false };
   }
 
   render () {
